@@ -1,3 +1,4 @@
+{% load disqus_tags %}
 {% load globaltags %}
 <div class="sidebar-module sidebar-module-inset">
   <p>
@@ -35,6 +36,11 @@
   </div>
 </div>
 -->
+
+<div class="sidebar-module sidebar-module-inset">
+  <h4>Recent Comments</h4>
+  {% disqus_recent_comments shortname 5 50 0 24 %}
+</div>
 
 <div class="sidebar-module sidebar-module-inset">
   <h4>Recent Posts</h4>
