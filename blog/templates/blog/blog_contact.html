@@ -9,8 +9,8 @@
     <meta http-equiv="refresh" content="7;url={% url 'homepage' %}" />
     <p class="alert alert-success text-center cst__radius">{{ success }}</p>
   {% else %}
-    <p><center><span style="color: #f00">*) Please type again your email on body message.</span><br />
-    <!-- { If this form can not work, contact me at <a href="https://www.facebook.com/messages/agaust" target="_blank">Facebook Chat</a> }</center></p> -->
+    <p><center><span style="color: #3c3c3c">*) Please type your email on body message.</span><br />
+    <!-- { If this form can not work, contact me at <a href="https://www.facebook.com/messages/agaust" target="_blank">Facebook Chat</a> }</center></p>-->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <form action="." method="POST">
     {% csrf_token %}
