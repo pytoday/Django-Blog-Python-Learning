@@ -8,16 +8,22 @@
     <iframe src="https://ghbtns.com/github-btn.html?user=pytoday&repo=Django-Blog-Python-Learning&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
   </p>
 </div>
+{% if user.is_authenticated %}
 <div class="sidebar-module sidebar-module-inset">
-        <button onclick="location.href='/users/login'" type="button" class="btn btn-success btn-block cst__radius">
-        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login
+        <button onclick="location.href='/'" type="button" class="btn btn-success btn-block cst__radius">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Hello, {{ user.username }}</button>
         <!--<span class="glyphicon glyphicon-save" aria-hidden="true"></span> Logout -->
-        </buton>
         <button onclick="location.href='/users/logout'" type="button" class="btn btn-success btn-block cst__radius">
-        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout
+        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout </button>
         <!--<span class="glyphicon glyphicon-save" aria-hidden="true"></span> Logout -->
-        </buton>
 </div>
+{% else %}
+    <div class="sidebar-module sidebar-module-inset">
+    <button onclick="location.href='/users/login'" type="button" class="btn btn-success btn-block cst__radius">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login </button>
+    </div>
+
+{% endif %}
 
 <!--
 <div class="sidebar-module sidebar-module-inset">
